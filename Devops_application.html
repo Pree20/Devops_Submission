@@ -1,0 +1,80 @@
+<html>
+<Title>Course Registration</title>
+<script>
+function myFunction() {
+var totalCost = 0;
+java =document.getElementById("java");
+cpp = document.getElementById("cpp");
+c = document.getElementById("c");
+python = document.getElementById("python");
+if (java.checked == true) {
+totalCost += Number(java.value)
+}
+if (cpp.checked == true) {
+totalCost += Number(cpp.value)
+}
+if (c.checked == true) {
+totalCost += Number(c.value)
+}
+if (python.checked == true) {
+totalCost += Number(python.value)}
+document.getElementById("total").value=totalCost;
+}
+function valid(){
+if(document.getElementById("Age").value<18){
+alert("You have entered invalid age")
+}
+}
+function check() {
+if(document.getElementById("Name").value == "") {
+alert("The field is empty.");
+}
+}
+</script>
+<body style="background-color:lavender">
+<form name="f1" action="f.html" >
+<strong><h1 style="text-align:center;">Fill in your details</h1></strong>
+<table border="1" cellpadding="5" cellspacing="5" >
+<th>Field</th>
+<th>your details</th>
+<tr><td>Name:</td>
+<td><input type="text" id="Name" name="Name"value=""><br><br></td></tr>
+<tr><td>date of birth:</td>
+<td><input type="date" name="Name"value=""><br><br></td>
+</tr>
+<tr><td>Age:</td>
+<td><input type="text" id="Age" name="Name"value=""><br><br></td>
+</tr>
+<tr><td>Degree Currently being pursued:</td>
+<td><input type="text" name="Name"value=""><br><br></td>
+</tr>
+<tr><td>email id:</td>
+<td><input type="text" name="Name"value=""><br><br></td>
+</tr>
+<tr><td>Address:</td>
+<td><input type="text" name="add"value="" style= "padding: 20px 20px"><br><br></td>
+</tr>
+<tr><td>Phone no.:</td>
+<td><input type="text" name="ph"value=""><br><br></td>
+</tr>
+<tr><td>Select Courses you are interested in</td>:</td>
+<td>
+<input type ="checkbox" id="java" name="java" value="2500"> java <br><br>
+<input type ="checkbox" id="cpp" name="cpp" value="2000" > cpp <br><br>
+<input type ="checkbox" id="c" name="c" value="1500" > c <br><br>
+<input type ="checkbox" id="python" name="python" value="3000" > python <br><br>
+</td>
+</tr>
+<tr><td>year of graduation:</td>
+<td><input type="text" name="Name"value=""><br><br></td></tr>
+</tr>
+</table>
+<br></br>
+<input type="submit" value="submit" onclick="check(),valid()">
+</form>
+<form name="calculator">
+You have to pay: <input type="text" id="total" name="total">
+<input type="button" value="ADD" onclick="myFunction()">
+</form>
+</body>
+</html>
